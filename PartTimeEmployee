@@ -1,0 +1,22 @@
+package com.user.tp;
+
+import java.util.Scanner;
+
+public class PartTimeEmployee extends RunEmployee{
+    
+    // Enter the 
+    Scanner scan = new Scanner(System.in);
+    
+    double ratePerHour = scan.nextByte();
+    int hoursWorked = scan.nextByte(); 
+    
+    private double wage = hoursWorked*ratePerHour;
+    
+    // Wage of the Employee
+    public void setWage(double wage){
+        this.wage = wage;
+    }
+    public double getWage(){
+        return wage;
+    }
+}
