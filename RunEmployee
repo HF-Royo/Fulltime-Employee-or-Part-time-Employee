@@ -1,0 +1,48 @@
+package com.user.tp;
+
+import java.util.Scanner;
+
+public class RunEmployee extends Employee{
+   
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        // Insert name
+        System.out.println("Enter your name: ");
+        
+        Employee e = new Employee();
+        
+        // Choose if Fulltime of Part time Employee
+        System.out.println("Enter F if you are a Full time Employee or P if you are a Part time Employee: ");
+        String ask = scan.nextLine().toUpperCase();
+   
+        
+         switch(ask){
+            
+            case "F":
+                
+                System.out.println("Enter your Monthly Salary: ");
+                FullTimeEmployee fte = new FullTimeEmployee();
+                System.out.println("Salary: "+fte.getMonthlySalary());
+                System.out.println("Name: "+e.getName());
+                System.out.println("Monthly Salary: "+fte.getMonthlySalary());
+                break;
+                
+            case "P":
+                    
+                System.out.println("Type your rate per hour: ");
+                
+                PartTimeEmployee pte = new PartTimeEmployee();
+                System.out.println("Type the rate per hour: "); 
+                System.out.println(pte.ratePerHour);
+                System.out.println("Enter the number of hours you worked for the entire month: ");
+                System.out.println(pte.hoursWorked);
+                System.out.println("Name: "+e.getName());
+                System.out.println("Wage "+pte.getWage());
+                break;
+                default:
+                System.out.println("Only press F or P");
+            }        
+        }
+    }  
