@@ -1,0 +1,20 @@
+package com.user.tp;
+
+import java.util.Scanner;
+
+public class Employee{
+    
+    // Name for the Employee
+    Scanner scan = new Scanner(System.in);   
+    
+    private String name = scan.nextLine();
+    
+    // Ask name
+    public void setName(String name){
+        this.name = name; 
+    }
+    public String getName(){
+        return name;
+    }
+    
+}
