@@ -1,0 +1,19 @@
+package com.user.tp;
+
+import java.util.Scanner;
+
+public class FullTimeEmployee extends RunEmployee{
+    
+    // Enter the Monthly Salary
+    Scanner scan = new Scanner(System.in);
+    
+    double monthlySalary = scan.nextByte();
+    
+    // Show and enter monthly Salary
+    public void setMonthlySalary(double mounthlySalary){
+     this.monthlySalary = mounthlySalary;
+    } 
+     public double getMonthlySalary(){
+     return monthlySalary;
+    }
+}
